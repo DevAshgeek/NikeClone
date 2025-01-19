@@ -13,7 +13,7 @@ const Nav = () => {
 
   return (
     <header className="padding-x bg-gradient-to-r from-white to-transparent py-8 fixed top-0 left-0 z-20 w-full">
-      <nav className="flex justify-between items-center max-container">
+      <nav className="flex max-sm:pr-3 justify-between items-center max-container">
         <a href="/">
           <img src={headerLogo} alt="nike logo" width={130} height={29} />
         </a>
@@ -44,8 +44,8 @@ const Nav = () => {
 
         {isMenuOpen && (
           <ul
-            className="fixed top-16 right-0 bg-white shadow-lg p-5 h-full w-64 rounded-lg flex flex-col items-start gap-4 lg:hidden"
-            onClick={() => setIsMenuOpen(false)} // Close on clicking any link
+            className="fixed top-16 right-0 bg-white shadow-lg p-5 h-full max-w-[90vw] w-full rounded-lg flex flex-col items-start gap-4 lg:hidden overflow-y-auto"
+            onClick={() => setIsMenuOpen(false)}
           >
             {navLinks.map((item) => (
               <li key={item.label}>
